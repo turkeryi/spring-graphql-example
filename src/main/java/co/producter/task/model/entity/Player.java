@@ -1,4 +1,4 @@
-package co.producter.task.entity;
+package co.producter.task.model.entity;
 
 import co.producter.task.enums.Position;
 import javax.persistence.Column;
@@ -40,7 +40,7 @@ public class Player {
   @Column(name = "surname")
   private String surname;
 
-  @NotNull(message = "Player's position could not be null.")
+  @NotNull(message = "Position could not be null.")
   @Enumerated(EnumType.STRING)
   @Column(name = "position")
   private Position position;

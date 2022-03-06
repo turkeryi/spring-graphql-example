@@ -1,6 +1,6 @@
 package co.producter.task.repository;
 
-import co.producter.task.entity.Player;
+import co.producter.task.model.entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.graphql.data.GraphQlRepository;
 

@@ -1,0 +1,8 @@
+mutation addPlayer($playerInput: PlayerInput!) {
+    addPlayer(playerInput: $playerInput) {
+        id
+        name
+        surname
+        position
+    }
+}
