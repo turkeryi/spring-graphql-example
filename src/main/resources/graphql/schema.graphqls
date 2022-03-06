@@ -4,6 +4,7 @@ type Query {
 
 type Mutation {
     addPlayer(playerInput: PlayerInput!): Player!
+    deletePlayer(id: ID!): Boolean
 }
 
 input PlayerInput {
