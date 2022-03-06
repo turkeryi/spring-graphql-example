@@ -1,0 +1,10 @@
+type Query {
+    players: [Player]!
+}
+
+type Player {
+    id: ID!
+    name: String!
+    surname: String!
+    position: String!
+}
