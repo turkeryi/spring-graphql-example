@@ -2,6 +2,17 @@ type Query {
     players: [Player]!
 }
 
+type Mutation {
+    addPlayer(playerInput: PlayerInput!): Player!
+    deletePlayer(id: ID!): Boolean
+}
+
+input PlayerInput {
+    name: String!
+    surname: String!
+    position: String!
+}
+
 type Player {
     id: ID!
     name: String!
