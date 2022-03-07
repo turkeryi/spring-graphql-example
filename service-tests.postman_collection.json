@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "3cfbf9d7-324f-418d-8c3d-809209f2649e",
+		"name": "service-tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Players",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    players {\n        id\n        name\n        surname\n        position\n    }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8761/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation addPlayer($playerInput: PlayerInput!) {\n  addPlayer(playerInput: $playerInput){\n        id\n        name\n        surname\n        position\n    }\n}",
+						"variables": "{\n  \"playerInput\": {\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"position\": \"SF\"\n  }\n}"
+					}
+				},
+				"url": {
+					"raw": "localhost:8761/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation deletePlayer($id: ID!) {\n  deletePlayer(id: $id)\n}",
+						"variables": "{\n  \"id\": \"1\"\n}"
+					}
+				},
+				"url": {
+					"raw": "localhost:8761/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8761",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
