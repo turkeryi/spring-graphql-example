@@ -19,7 +19,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
-public class PlayerControllerTests {
+public class PlayerServiceTests {
 
   @InjectMocks
   private PlayerService playerService;
